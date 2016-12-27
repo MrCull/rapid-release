@@ -1,0 +1,4 @@
+C:\Users\user\OneDrive\git\TosDeployRelease\TosDeployReleaseClassLibary\bin\Debug\TosDeployReleaseClassLibary.dll
+C:\Users\user\OneDrive\git\TosDeployRelease\TosDeployReleaseClassLibary\bin\Debug\TosDeployReleaseClassLibary.pdb
+C:\Users\user\OneDrive\git\TosDeployRelease\TosDeployReleaseClassLibary\obj\Debug\TosDeployReleaseClassLibary.dll
+C:\Users\user\OneDrive\git\TosDeployRelease\TosDeployReleaseClassLibary\obj\Debug\TosDeployReleaseClassLibary.pdb

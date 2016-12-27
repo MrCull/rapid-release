@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TosDeployReleaseClassLibary.DeployRelease">
+    <Position X="7.5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACABJBoAAQIAkABAAAgAAEgIAAQgAAAEBUAIAABCQA=</HashCode>
+      <FileName>DeployRelease.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TosDeployReleaseClassLibary.JobLoadFile">
+    <Position X="11.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>JobLoadFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TosDeployReleaseClassLibary.JobRretrieveMacrosFromDatabase">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAgAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>JobRretrieveMacrosFromDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TosDeployReleaseClassLibary.DatabaseObjectToDeploy">
+    <Position X="1.25" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ACABEAYAACAQEAgAAAAAIAIAACAAEEABABBJIAAQAAA=</HashCode>
+      <FileName>DatabaseObjectToDeploy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TosDeployReleaseClassLibary.DeployDatabaeNoneQueryObject">
+    <Position X="1" Y="1.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>DeployDatabaeNoneQueryObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TosDeployReleaseClassLibary.JobTranslateMacros">
+    <Position X="11.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAgAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>JobTranslateMacros.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TosDeployReleaseClassLibary.DeployPhasePocosFromDirectory">
+    <Position X="5.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAACAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>DeployPhasePocosFromDirectory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TosDeployReleaseClassLibary.DeployPhaseExecuteNoneQuery">
+    <Position X="5.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEEAAAABAAACAAAAAAQAAAA=</HashCode>
+      <FileName>DeployPhaseExecuteNoneQuery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TosDeployReleaseClassLibary.DeployPhase">
+    <Position X="3.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>DeployPhase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TosDeployReleaseClassLibary.DeployJob">
+    <Position X="9.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAARAAgAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>DeployJob.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TosDeployReleaseClassLibary.JobLoadObjectIntoDatabase">
+    <Position X="11.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>JobLoadObjectIntoDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
