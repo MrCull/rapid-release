@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -7,27 +8,17 @@ namespace TosDeployReleaseClassLibary
 {
     public class DeployPhasePocosFromDirectory : DeployPhase
     {
-        private string directorySearchPath;
-        private string additionalPermissions;
+        private List<DeployPhasePocosFromDirectorySequences> sequencesInPhase = new List<DeployPhasePocosFromDirectorySequences>();
 
-        public DeployPhasePocosFromDirectory(String deployPhaseName, string deployDirectorySearchPath, string pocoAdditionalPermissions) 
-            : base(deployPhaseName)
+        public DeployPhasePocosFromDirectory(String deployPhaseName, bool logErrorsInThisPhase) 
+            : base(deployPhaseName, logErrorsInThisPhase)
         {
-            directorySearchPath = deployDirectorySearchPath;
-            additionalPermissions = pocoAdditionalPermissions;
         }
 
-        public string DirectorySearchPath
+        public List<DeployPhasePocosFromDirectorySequences> SequencesInPhase
         {
-            get
-            {
-                return directorySearchPath;
-            }
-
-            set
-            {
-                directorySearchPath = value;
-            }
+            get { return sequencesInPhase; }
+            set { sequencesInPhase = value; }
         }
     }
 }

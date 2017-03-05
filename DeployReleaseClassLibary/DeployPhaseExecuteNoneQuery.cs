@@ -7,30 +7,20 @@ namespace TosDeployReleaseClassLibary
 {
     public class DeployPhaseExecuteNoneQuery : DeployPhase 
     {
-        private string phaseName;
-        private bool isStarted;
-        private bool isFinished;
-        private string noneQueryText;
+        private string noneQueryCommand;
 
-        public DeployPhaseExecuteNoneQuery(String deployPhaseName,  String deployNoneQueryText) 
-            : base(deployPhaseName)
+        public string NoneQueryCommand
         {
-            
-        }
-
-        public int PhaseName
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
+            get { return noneQueryCommand; }
+            set { noneQueryCommand = value;  }
         }
 
 
+        public DeployPhaseExecuteNoneQuery(String deployPhaseName,  String noneQueryCommand, bool logErrorsInThisPhase)
+            : base(deployPhaseName, logErrorsInThisPhase)
+        {
+            this.noneQueryCommand = noneQueryCommand;
+        }
 
     }
 }

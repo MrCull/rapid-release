@@ -52,10 +52,12 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTestTranslateMacros.cs" />
-    <Compile Include="UnitTestLoadFile.cs" />
+    <Compile Include="UnitTestJobsCombined.cs" />
+    <Compile Include="UnitTestJobRetriveMacrosFromDatabase.cs" />
+    <Compile Include="UnitTestJobTranslateMacros.cs" />
+    <Compile Include="UnitTestJobLoadFile.cs" />
     <Compile Include="UnitTestDatabaseObjectToDeploy.cs" />
-    <Compile Include="UnitTestBeployRelease.cs" />
+    <Compile Include="UnitTestDeployRelease.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

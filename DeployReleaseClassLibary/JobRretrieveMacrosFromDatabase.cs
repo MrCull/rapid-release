@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
@@ -7,23 +8,29 @@ namespace TosDeployReleaseClassLibary
 {
     public class JobRretrieveMacrosFromDatabase : DeployJob
     {
-        private int macroTable;
+        public JobRretrieveMacrosFromDatabase(DeployRelease deployRelease, DatabaseObjectToDeploy dbObjectToDeploy)
+            : base(deployRelease, dbObjectToDeploy)
+        { }
 
-        public int MacroTable
+        public JobRretrieveMacrosFromDatabase()
+        { }
+
+        public override void JobExecute()
         {
-            get
+            using (SqlConnection con = new SqlConnection(tosDeployReleaseObject.GetDatabaseConnectionString))
             {
-                throw new System.NotImplementedException();
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(tosDeployReleaseObject.MacroQueryString, con))
+                {
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            tosDeployReleaseObject.MacroTable[(string)reader["Key"]] = (string)reader["Value"];
+                        }
+                    }
+                }
             }
-
-            set
-            {
-            }
-        }
-
-        public override void Execute()
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JobLoadObjectIntoDatabase.cs" />
+    <Compile Include="DeployPhasePocosFromDirectorySequences.cs" />
+    <Compile Include="JobExecuteNoneQuery.cs" />
+    <Compile Include="JobUploadPOCO.cs" />
     <Compile Include="JobTranslateMacros.cs" />
     <Compile Include="DeployPhase.cs" />
     <Compile Include="JobLoadFile.cs" />

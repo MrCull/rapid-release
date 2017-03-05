@@ -20,12 +20,18 @@ namespace TosDeployReleaseClassLibary
         private string errorsDatabaseUploadPass2;
         private bool haveTriedToLoadFile = false;
         private bool isBeingWorkedOn = false;
+        private int numberDeadlocks = 0;
+        private int numberOfTimesLoaded = 0;
+        private List<List<string>>errors;
+        private List<List<string>>sqlPrintOutput;
 
         public DatabaseObjectToDeploy()
         {
+            errors = new List<List<string>>();
+            sqlPrintOutput = new List<List<string>>();
         }
 
-        public DatabaseObjectToDeploy(string filePath)
+        public DatabaseObjectToDeploy(string filePath) : this()
         {
             FilePath = filePath;
         }
@@ -52,11 +58,13 @@ namespace TosDeployReleaseClassLibary
         public bool HaveTriedToLoadFile
         {
             get { return haveTriedToLoadFile; }
+            set { haveTriedToLoadFile = value; }
         }
 
         public bool IsBeingWorkedOn
         {
             get { return isBeingWorkedOn; }
+            set { isBeingWorkedOn = value; }
         }
 
         public bool IsFileLoaded
@@ -124,6 +132,43 @@ namespace TosDeployReleaseClassLibary
             {
                 errorsDatabaseUploadPass2 = value;
             }
+        }
+
+        public string DatabasePermissionClause
+        {
+            get
+            {
+                return databasePermissionsClause;
+            }
+
+            set
+            {
+                databasePermissionsClause = value;
+            }
+        }
+
+        public List<List<string>> Errors
+        {
+            get { return errors; }
+            set { errors = value; }
+        }
+
+        public List<List<string>> SqlPrintOutput
+        {
+            get { return sqlPrintOutput; }
+            set { sqlPrintOutput = value; }
+        }
+
+        public int NumberDeadlocks
+        {
+            get { return numberDeadlocks; }
+            set { numberDeadlocks = value; }
+        }
+
+        public int NumberOfTimesLoaded
+        {
+            get { return numberOfTimesLoaded; }
+            set { numberOfTimesLoaded = value; }
         }
     }
 }
