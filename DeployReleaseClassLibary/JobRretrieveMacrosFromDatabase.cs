@@ -4,10 +4,13 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
-namespace TosDeployReleaseClassLibary
+namespace DeployReleaseClassLibary
 {
-    public class JobRretrieveMacrosFromDatabase : DeployJob
+    public class JobRretrieveMacrosFromDatabase : Job
     {
+        public override event EventHandler<EventArgsJobProgress> ThrowEventJobProgress = delegate { };
+        public override event EventHandler<EventArgsJobError> ThrowEventJobError = delegate { };
+
         public JobRretrieveMacrosFromDatabase(DeployRelease deployRelease, DatabaseObjectToDeploy dbObjectToDeploy)
             : base(deployRelease, dbObjectToDeploy)
         { }
@@ -17,16 +20,16 @@ namespace TosDeployReleaseClassLibary
 
         public override void JobExecute()
         {
-            using (SqlConnection con = new SqlConnection(tosDeployReleaseObject.GetDatabaseConnectionString))
+            using (SqlConnection con = new SqlConnection(DeployReleaseObject.GetMainDatabaseConnectionString))
             {
                 con.Open();
-                using (SqlCommand cmd = new SqlCommand(tosDeployReleaseObject.MacroQueryString, con))
+                using (SqlCommand cmd = new SqlCommand(DeployReleaseObject.MacroQueryString, con))
                 {
                     using (var reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            tosDeployReleaseObject.MacroTable[(string)reader["Key"]] = (string)reader["Value"];
+                            DeployReleaseObject.MacroTable[(string)reader["Key"]] = (string)reader["Value"];
                         }
                     }
                 }

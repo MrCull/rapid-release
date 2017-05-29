@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace TosDeployReleaseClassLibary
+namespace DeployReleaseClassLibary
 {
-    public class JobTranslateMacros : DeployJob
+    public class JobTranslateMacros : Job
     {
+        public override event EventHandler<EventArgsJobProgress> ThrowEventJobProgress = delegate { };
+        public override event EventHandler<EventArgsJobError> ThrowEventJobError = delegate { };
+
         public JobTranslateMacros(DeployRelease deployRelease, DatabaseObjectToDeploy dbObjectToDeploy)
             : base(deployRelease, dbObjectToDeploy)
         { }
@@ -18,17 +21,20 @@ namespace TosDeployReleaseClassLibary
         public override void JobExecute()
         {
             // First check if we need to wait for a previous task to load this file into memory
-            while(!tosDatabaseObjectToDeploy.HaveTriedToLoadFile)
+            while(!databaseObjectToDeploy.HaveTriedToLoadFile)
             {
                 Thread.Sleep(10);
             }
 
-            foreach (KeyValuePair<string, string> entry in tosDeployReleaseObject.MacroTable)
+            foreach (KeyValuePair<string, string> entry in DeployReleaseObject.MacroTable)
             {
-                tosDatabaseObjectToDeploy.ObjectText = tosDatabaseObjectToDeploy.ObjectText.Replace(entry.Key, entry.Value);
+                databaseObjectToDeploy.ObjectText = databaseObjectToDeploy.ObjectText.Replace(entry.Key, entry.Value);
             }
 
-            tosDatabaseObjectToDeploy.IsMacroTranslationCompleted = true;
+            // Nasty hack to fix when ANSI_WARNINGS has been translated into ANSI_50S by above.
+            databaseObjectToDeploy.ObjectText = databaseObjectToDeploy.ObjectText.Replace("ANSI_50S", "ANSI_WARNINGS");
+
+            databaseObjectToDeploy.IsMacroTranslationCompleted = true;
         }
     }
 }

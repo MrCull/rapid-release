@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TosDeployReleaseClassLibary
+namespace DeployReleaseClassLibary
 {
     public class DeployPhaseExecuteNoneQuery : DeployPhase 
     {
@@ -15,6 +15,11 @@ namespace TosDeployReleaseClassLibary
             set { noneQueryCommand = value;  }
         }
 
+
+        public DeployPhaseExecuteNoneQuery()
+           : base()
+        {
+        }
 
         public DeployPhaseExecuteNoneQuery(String deployPhaseName,  String noneQueryCommand, bool logErrorsInThisPhase)
             : base(deployPhaseName, logErrorsInThisPhase)

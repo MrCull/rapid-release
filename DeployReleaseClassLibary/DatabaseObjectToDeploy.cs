@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace TosDeployReleaseClassLibary
+namespace DeployReleaseClassLibary
 {
     public class DatabaseObjectToDeploy
     {
@@ -12,7 +12,6 @@ namespace TosDeployReleaseClassLibary
         private string objectName;
         private string objectText;
         private string databasePermissionsClause;
-        private string databaseObjectText;
         private bool isFileLoaded = false;
         private bool isMacroTranslationCompleted = false;
         private string errorsFileLoad;
@@ -21,6 +20,7 @@ namespace TosDeployReleaseClassLibary
         private bool haveTriedToLoadFile = false;
         private bool isBeingWorkedOn = false;
         private int numberDeadlocks = 0;
+        private int numberReferencedEntityErrors = 0;
         private int numberOfTimesLoaded = 0;
         private List<List<string>>errors;
         private List<List<string>>sqlPrintOutput;
@@ -169,6 +169,19 @@ namespace TosDeployReleaseClassLibary
         {
             get { return numberOfTimesLoaded; }
             set { numberOfTimesLoaded = value; }
+        }
+
+        public int NumberReferencedEntityErrors
+        {
+            get
+            {
+                return numberReferencedEntityErrors;
+            }
+
+            set
+            {
+                numberReferencedEntityErrors = value;
+            }
         }
     }
 }

@@ -1,0 +1,7 @@
+C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\DeployUnitTest\bin\Release\TosDeployUnitTest.dll
+C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\DeployUnitTest\bin\Release\TosDeployUnitTest.pdb
+C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\DeployUnitTest\bin\Release\TosDeployReleaseClassLibary.dll
+C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\DeployUnitTest\bin\Release\TosDeployReleaseClassLibary.pdb
+C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\DeployUnitTest\obj\Release\DeployUnitTest.csprojResolveAssemblyReference.cache
+C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\DeployUnitTest\obj\Release\TosDeployUnitTest.dll
+C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\DeployUnitTest\obj\Release\TosDeployUnitTest.pdb

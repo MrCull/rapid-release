@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 
-namespace TosDeployReleaseClassLibary
+namespace DeployReleaseClassLibary
 {
+    [XmlInclude(typeof(DeployPhaseExecuteNoneQuery))]
+    [XmlInclude(typeof(DeployPhasePocosFromDirectory))]
     public abstract class DeployPhase
     {
         private string phaseName;
         private bool isStarted = false;
         private bool isFinished = false;
         private bool logErrorsInThisPhase;
+        private DeployRelease deployRelease;
         private List<int> phasesRequiredFor = new List<int>();
 
         public string PhaseName
@@ -18,11 +22,15 @@ namespace TosDeployReleaseClassLibary
             get { return phaseName; }
             set { phaseName = value; }
         }
+
+        [XmlIgnoreAttribute]
         public bool IsStarted
         {
             get { return isStarted; }
             set { isStarted = value; }
         }
+
+        [XmlIgnoreAttribute]
         public bool IsFinishedd
         {
             get { return isFinished; }
@@ -42,5 +50,25 @@ namespace TosDeployReleaseClassLibary
             this.phaseName = phaseName;
             this.logErrorsInThisPhase = logErrorsInThisPhase;
         }
+
+        [XmlIgnoreAttribute]
+        public DeployRelease DeployRelease
+        {
+            get
+            {
+                return deployRelease;
+            }
+
+            set
+            {
+                deployRelease = value;
+            }
+        }
+
+        public DeployPhase()
+        {
+
+        }
+ 
     }
 }
