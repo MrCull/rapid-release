@@ -1,129 +1,116 @@
 ﻿using System;
 using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TosDeployReleaseClassLibary;
+using DeployReleaseClassLibary;
 
-namespace TosDeployUnitTest
+namespace DeployUnitTest
 {
     [TestClass]
     public class UnitTestDatabaseObjectToDeploy
     {
         [TestMethod]
-        public void Test_TosDatabaseObjectToDeploy_InstantiateObjectAndCheckFilePath()
+        public void Test_DatabaseObjectToDeploy_InstantiateObjectAndCheckFilePath()
         {
             string filePath = "notImportant";
-            var tosDatabaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
+            var databaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
 
-            Assert.AreEqual(filePath, tosDatabaseObjectToDeploy.FilePath);
+            Assert.AreEqual(filePath, databaseObjectToDeploy.FilePath);
         }
 
 
         [TestMethod]
-        public void Test_TosDatabaseObjectToDeploy_InstantiateObjectAndCheckDidFileLoadSucessfully()
+        public void Test_DatabaseObjectToDeploy_InstantiateObjectAndCheckDidFileLoadSucessfully()
         {
             string filePath = "notImportant";
-            var tosDatabaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
+            var databaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
 
-            Assert.AreEqual(false, tosDatabaseObjectToDeploy.HaveTriedToLoadFile);
+            Assert.AreEqual(false, databaseObjectToDeploy.HaveTriedToLoadFile);
         }
 
 
         [TestMethod]
-        public void Test_TosDatabaseObjectToDeploy_InstantiateObjectAndCheckIsBeingWorkedOn()
+        public void Test_databaseObjectToDeploy_InstantiateObjectAndCheckIsBeingWorkedOn()
         {
             string filePath = "notImportant";
-            var tosDatabaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
+            var databaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
 
-            Assert.AreEqual(false, tosDatabaseObjectToDeploy.IsBeingWorkedOn);
+            Assert.AreEqual(false, databaseObjectToDeploy.IsBeingWorkedOn);
         }
 
         [TestMethod]
-        public void Test_TosDatabaseObjectToDeploy_InstantiateObjectAndCheckIsFileLoaded()
+        public void Test_databaseObjectToDeploy_InstantiateObjectAndCheckIsFileLoaded()
         {
             string filePath = "notImportant";
-            var tosDatabaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
+            var databaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
 
-            Assert.AreEqual(false, tosDatabaseObjectToDeploy.IsFileLoaded);
+            Assert.AreEqual(false, databaseObjectToDeploy.IsFileLoaded);
         }
 
         [TestMethod]
-        public void Test_TosDatabaseObjectToDeploy_InstantiateObjectAndCheckIsMacroTranslationCompleted()
+        public void Test_databaseObjectToDeploy_InstantiateObjectAndCheckIsMacroTranslationCompleted()
         {
             string filePath = "notImportant";
-            var tosDatabaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
+            var databaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
 
-            Assert.AreEqual(false, tosDatabaseObjectToDeploy.IsMacroTranslationCompleted);
+            Assert.AreEqual(false, databaseObjectToDeploy.IsMacroTranslationCompleted);
         }
 
 
         [TestMethod]
-        public void Test_TosDatabaseObjectToDeploy_InstantiateObjectAndCheckOjectName()
+        public void Test_databaseObjectToDeploy_InstantiateObjectAndCheckOjectName()
         {
             string filePath = "c:\\temp\\abc.sql";
-            var tosDatabaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
+            var databaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
 
-            Assert.AreEqual("abc", tosDatabaseObjectToDeploy.ObjectName);
-        }
-
-
-        [TestMethod]
-        public void Test_TosDatabaseObjectToDeploy_SimulateLoadFile()
-        {
-            string filePath = "c:\\temp\\abc.sql";
-            string fileText = "notImportant";
-            var tosDatabaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
-
-            tosDatabaseObjectToDeploy.ObjectText = fileText;
-
-            Assert.AreEqual(fileText, tosDatabaseObjectToDeploy.ObjectText);
+            Assert.AreEqual("abc", databaseObjectToDeploy.ObjectName);
         }
 
         [TestMethod]
-        public void Test_TosDatabaseObjectToDeploy_SimulateLoadIsFileLoaded()
+        public void Test_databaseObjectToDeploy_SimulateLoadIsFileLoaded()
         {
             string filePath = "c:\\temp\\abc.sql";
             string fileText = "notImportant";
-            var tosDatabaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
+            var databaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
 
-            tosDatabaseObjectToDeploy.ObjectText = fileText;
+            databaseObjectToDeploy.ObjectText = fileText;
 
-            Assert.AreEqual(true, tosDatabaseObjectToDeploy.IsFileLoaded);
+            Assert.AreEqual(true, databaseObjectToDeploy.IsFileLoaded);
         }
 
         [TestMethod]
-        public void Test_TosDatabaseObjectToDeploy_SimulateLoadDidFileLoadSuccessfully()
+        public void Test_databaseObjectToDeploy_SimulateLoadDidFileLoadSuccessfully()
         {
             string filePath = "c:\\temp\\abc.sql";
             string fileText = "notImportant";
-            var tosDatabaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
+            var databaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
 
-            tosDatabaseObjectToDeploy.ObjectText = fileText;
+            databaseObjectToDeploy.ObjectText = fileText;
 
-            Assert.AreEqual(true, tosDatabaseObjectToDeploy.HaveTriedToLoadFile);
+            Assert.AreEqual(true, databaseObjectToDeploy.HaveTriedToLoadFile);
         }
 
         [TestMethod]
-        public void Test_TosDatabaseObjectToDeploy_SimulateLoadFileErrorText()
+        public void Test_databaseObjectToDeploy_SimulateLoadFileErrorText()
         {
             string filePath = "c:\\temp\\abc.sql";
             string fileLoadErrorText = "notImportant";
-            var tosDatabaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
+            var databaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
 
-            tosDatabaseObjectToDeploy.ErrorsFileLoad = fileLoadErrorText;
+            databaseObjectToDeploy.ErrorsFileLoad = fileLoadErrorText;
 
-            Assert.AreEqual(fileLoadErrorText, tosDatabaseObjectToDeploy.ErrorsFileLoad);
+            Assert.AreEqual(fileLoadErrorText, databaseObjectToDeploy.ErrorsFileLoad);
         }
 
         [TestMethod]
-        public void Test_TosDatabaseObjectToDeploy_SimulateLoadErrorText()
+        public void Test_databaseObjectToDeploy_SimulateLoadErrorText()
         {
             string filePath = "c:\\temp\\abc.sql";
             string fileLoadErrorText = "notImportant";
-            var tosDatabaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
+            var databaseObjectToDeploy = new DatabaseObjectToDeploy(filePath);
 
-            tosDatabaseObjectToDeploy.ErrorsFileLoad = fileLoadErrorText;
+            databaseObjectToDeploy.ErrorsFileLoad = fileLoadErrorText;
 
-            Assert.AreEqual(true, tosDatabaseObjectToDeploy.HaveTriedToLoadFile);
+            Assert.AreEqual(true, databaseObjectToDeploy.HaveTriedToLoadFile);
         }
     }
 }

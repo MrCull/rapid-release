@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeployRapidReleaseClassLibary", "DeployReleaseClassLibary\DeployRapidReleaseClassLibary.csproj", "{8D29205B-470F-4C75-AFF6-EF358D9101FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeployUnitTest", "DeployUnitTest\DeployUnitTest.csproj", "{02946DB7-AFAE-47E5-AE2D-E55BDAB2394A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeployViaConsoleApp", "DeployViaConsoleApp\DeployViaConsoleApp.csproj", "{1B03D099-56E1-4368-9F3C-37DD2E1F7D03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{02946DB7-AFAE-47E5-AE2D-E55BDAB2394A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02946DB7-AFAE-47E5-AE2D-E55BDAB2394A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02946DB7-AFAE-47E5-AE2D-E55BDAB2394A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B03D099-56E1-4368-9F3C-37DD2E1F7D03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B03D099-56E1-4368-9F3C-37DD2E1F7D03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B03D099-56E1-4368-9F3C-37DD2E1F7D03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B03D099-56E1-4368-9F3C-37DD2E1F7D03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

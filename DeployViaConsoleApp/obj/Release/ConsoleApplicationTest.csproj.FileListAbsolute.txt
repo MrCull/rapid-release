@@ -1,0 +1,8 @@
+C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\ConsoleApplicationTest\bin\Release\ConsoleApplicationTest.exe.config
+C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\ConsoleApplicationTest\bin\Release\ConsoleApplicationTest.exe
+C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\ConsoleApplicationTest\bin\Release\ConsoleApplicationTest.pdb
+C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\ConsoleApplicationTest\bin\Release\TosDeployReleaseClassLibary.dll
+C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\ConsoleApplicationTest\bin\Release\TosDeployReleaseClassLibary.pdb
+C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\ConsoleApplicationTest\obj\Release\ConsoleApplicationTest.csprojResolveAssemblyReference.cache
+C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\ConsoleApplicationTest\obj\Release\ConsoleApplicationTest.exe
+C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\ConsoleApplicationTest\obj\Release\ConsoleApplicationTest.pdb

@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-namespace TosDeployReleaseClassLibary
+namespace DeployReleaseClassLibary
 {
-    public class JobLoadFile : DeployJob
+    public class JobLoadFile : Job
     {
+        public override event EventHandler<EventArgsJobProgress> ThrowEventJobProgress = delegate { };
+        public override event EventHandler<EventArgsJobError> ThrowEventJobError = delegate { };
+
         public JobLoadFile(DeployRelease deployRelease, DatabaseObjectToDeploy dbObjectToDeploy)
             : base(deployRelease, dbObjectToDeploy)
         { }
@@ -17,14 +20,13 @@ namespace TosDeployReleaseClassLibary
 
         public override void JobExecute()
         {
-            using (StreamReader file = new StreamReader(tosDatabaseObjectToDeploy.FilePath))
+            using (StreamReader file = new StreamReader(databaseObjectToDeploy.FilePath))
             {
-                tosDatabaseObjectToDeploy.ObjectText = file.ReadToEnd();
-                file.Close();
-                tosDatabaseObjectToDeploy.IsFileLoaded = true;
+                databaseObjectToDeploy.ObjectText = file.ReadToEnd();
+                databaseObjectToDeploy.IsFileLoaded = true;
             }
 
-            tosDatabaseObjectToDeploy.HaveTriedToLoadFile = true;
+            databaseObjectToDeploy.HaveTriedToLoadFile = true;
         }
     }
 }

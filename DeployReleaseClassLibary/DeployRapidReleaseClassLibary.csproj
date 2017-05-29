@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventArgsJobError.cs" />
+    <Compile Include="EventArgsJobProgress.cs" />
+    <Compile Include="Deploy.cs" />
     <Compile Include="DeployPhasePocosFromDirectorySequences.cs" />
     <Compile Include="JobExecuteNoneQuery.cs" />
     <Compile Include="JobUploadPOCO.cs" />
@@ -53,7 +56,7 @@
     <Compile Include="DeployDatabaeNoneQueryObject.cs" />
     <Compile Include="DeployPhaseExecuteNoneQuery.cs" />
     <Compile Include="DeployPhasePocosFromDirectory.cs" />
-    <Compile Include="DeployJob.cs" />
+    <Compile Include="Job.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="TosDeployReleaseClassDiagram.cd" />
