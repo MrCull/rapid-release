@@ -1,4 +1,0 @@
-C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\DeployReleaseClassLibary\bin\Release\TosDeployReleaseClassLibary.dll
-C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\DeployReleaseClassLibary\bin\Release\TosDeployReleaseClassLibary.pdb
-C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\DeployReleaseClassLibary\obj\Release\TosDeployReleaseClassLibary.dll
-C:\Users\culll\OneDrive\Documents\GitHub\rapid-release\DeployReleaseClassLibary\obj\Release\TosDeployReleaseClassLibary.pdb
